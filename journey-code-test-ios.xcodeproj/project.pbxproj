@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		6925DE6F2A578C77003A8739 /* CodingTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925DE6E2A578C77003A8739 /* CodingTestApp.swift */; };
-		6925DE712A578C77003A8739 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925DE702A578C77003A8739 /* ContentView.swift */; };
 		6925DE732A578C78003A8739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6925DE722A578C78003A8739 /* Assets.xcassets */; };
 		6925DE762A578C78003A8739 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6925DE752A578C78003A8739 /* Preview Assets.xcassets */; };
 		6925DE802A578C78003A8739 /* journey_code_test_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925DE7F2A578C78003A8739 /* journey_code_test_iosTests.swift */; };
+		699A896A2A58C1CE007761AA /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89692A58C1CE007761AA /* PostListView.swift */; };
+		699A896C2A58C1E8007761AA /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896B2A58C1E8007761AA /* CommentListView.swift */; };
+		699A89702A58C26A007761AA /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */; };
 		69E2C4BD2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4BE2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4C32A57A7E500862210 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4C22A57A7E500862210 /* Post.swift */; };
@@ -64,13 +66,15 @@
 /* Begin PBXFileReference section */
 		6925DE6B2A578C77003A8739 /* journey-code-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "journey-code-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6925DE6E2A578C77003A8739 /* CodingTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingTestApp.swift; sourceTree = "<group>"; };
-		6925DE702A578C77003A8739 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6925DE722A578C78003A8739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6925DE752A578C78003A8739 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6925DE7B2A578C78003A8739 /* journey-code-test-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "journey-code-test-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6925DE7F2A578C78003A8739 /* journey_code_test_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journey_code_test_iosTests.swift; sourceTree = "<group>"; };
 		6925DE892A578C78003A8739 /* journey_code_test_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journey_code_test_iosUITests.swift; sourceTree = "<group>"; };
 		6925DE8B2A578C78003A8739 /* journey_code_test_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journey_code_test_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		699A89692A58C1CE007761AA /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		699A896B2A58C1E8007761AA /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
+		699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
 		69E2C4B82A57912100862210 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		69E2C4B92A57913200862210 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		69E2C4BB2A57937C00862210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -141,7 +145,7 @@
 			children = (
 				69E2C4BB2A57937C00862210 /* Info.plist */,
 				6925DE6E2A578C77003A8739 /* CodingTestApp.swift */,
-				6925DE702A578C77003A8739 /* ContentView.swift */,
+				699A89662A58BB63007761AA /* Views */,
 				69E2C4C12A57A22D00862210 /* Models */,
 				69E2C4CA2A57A97E00862210 /* Core */,
 				6925DE722A578C78003A8739 /* Assets.xcassets */,
@@ -178,6 +182,32 @@
 				6925DE8B2A578C78003A8739 /* journey_code_test_iosUITestsLaunchTests.swift */,
 			);
 			path = "journey-code-test-iosUITests";
+			sourceTree = "<group>";
+		};
+		699A89662A58BB63007761AA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */,
+				699A896D2A58C200007761AA /* PostList */,
+				699A896E2A58C218007761AA /* CommentList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		699A896D2A58C200007761AA /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				699A89692A58C1CE007761AA /* PostListView.swift */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		699A896E2A58C218007761AA /* CommentList */ = {
+			isa = PBXGroup;
+			children = (
+				699A896B2A58C1E8007761AA /* CommentListView.swift */,
+			);
+			path = CommentList;
 			sourceTree = "<group>";
 		};
 		69E2C4BA2A57913C00862210 /* Config */ = {
@@ -370,15 +400,17 @@
 				69E2C4DA2A57BB5F00862210 /* ApiManager.swift in Sources */,
 				69E2C4E22A57C74F00862210 /* DataParser.swift in Sources */,
 				69E2C4FC2A57CF6A00862210 /* Utils.swift in Sources */,
+				699A896A2A58C1CE007761AA /* PostListView.swift in Sources */,
 				69E2C4D52A57B35D00862210 /* NetworkError.swift in Sources */,
-				6925DE712A578C77003A8739 /* ContentView.swift in Sources */,
 				69E2C4BD2A5794F500862210 /* Bundle.swift in Sources */,
 				69E2C4DE2A57C46200862210 /* RequestManager.swift in Sources */,
 				69E2C4E72A57CAF800862210 /* PostsRequest.swift in Sources */,
+				699A896C2A58C1E8007761AA /* CommentListView.swift in Sources */,
 				6925DE6F2A578C77003A8739 /* CodingTestApp.swift in Sources */,
 				69E2C4EB2A57CB0F00862210 /* CommentsRequest.swift in Sources */,
 				69E2C4C32A57A7E500862210 /* Post.swift in Sources */,
 				69E2C4CD2A57AF4400862210 /* RequestType.swift in Sources */,
+				699A89702A58C26A007761AA /* HomeCoordinatorView.swift in Sources */,
 				69E2C4D12A57AF6A00862210 /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
