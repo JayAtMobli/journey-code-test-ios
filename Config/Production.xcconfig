@@ -1,0 +1,12 @@
+//
+//  Production.xcconfig
+//  journey-code-test-ios
+//
+//  Created by Jay Park on 7/07/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Setup Production environment
+API_BASE_URL = jsonplaceholder.typicode.com
