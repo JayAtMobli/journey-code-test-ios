@@ -14,6 +14,9 @@
 		699A896A2A58C1CE007761AA /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89692A58C1CE007761AA /* PostListView.swift */; };
 		699A896C2A58C1E8007761AA /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896B2A58C1E8007761AA /* CommentListView.swift */; };
 		699A89702A58C26A007761AA /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */; };
+		699A89722A58C390007761AA /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89712A58C390007761AA /* HomeCoordinator.swift */; };
+		699A89742A58C4A9007761AA /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89732A58C4A9007761AA /* PostListViewModel.swift */; };
+		699A89762A58C4D4007761AA /* CommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89752A58C4D4007761AA /* CommentListViewModel.swift */; };
 		69E2C4BD2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4BE2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4C32A57A7E500862210 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4C22A57A7E500862210 /* Post.swift */; };
@@ -75,6 +78,9 @@
 		699A89692A58C1CE007761AA /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		699A896B2A58C1E8007761AA /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
+		699A89712A58C390007761AA /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		699A89732A58C4A9007761AA /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
+		699A89752A58C4D4007761AA /* CommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewModel.swift; sourceTree = "<group>"; };
 		69E2C4B82A57912100862210 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		69E2C4B92A57913200862210 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		69E2C4BB2A57937C00862210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */,
+				699A89712A58C390007761AA /* HomeCoordinator.swift */,
 				699A896D2A58C200007761AA /* PostList */,
 				699A896E2A58C218007761AA /* CommentList */,
 			);
@@ -198,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				699A89692A58C1CE007761AA /* PostListView.swift */,
+				699A89732A58C4A9007761AA /* PostListViewModel.swift */,
 			);
 			path = PostList;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				699A896B2A58C1E8007761AA /* CommentListView.swift */,
+				699A89752A58C4D4007761AA /* CommentListViewModel.swift */,
 			);
 			path = CommentList;
 			sourceTree = "<group>";
@@ -398,11 +407,14 @@
 			files = (
 				69E2C4C72A57A8A600862210 /* Comment.swift in Sources */,
 				69E2C4DA2A57BB5F00862210 /* ApiManager.swift in Sources */,
+				699A89742A58C4A9007761AA /* PostListViewModel.swift in Sources */,
 				69E2C4E22A57C74F00862210 /* DataParser.swift in Sources */,
+				699A89722A58C390007761AA /* HomeCoordinator.swift in Sources */,
 				69E2C4FC2A57CF6A00862210 /* Utils.swift in Sources */,
 				699A896A2A58C1CE007761AA /* PostListView.swift in Sources */,
 				69E2C4D52A57B35D00862210 /* NetworkError.swift in Sources */,
 				69E2C4BD2A5794F500862210 /* Bundle.swift in Sources */,
+				699A89762A58C4D4007761AA /* CommentListViewModel.swift in Sources */,
 				69E2C4DE2A57C46200862210 /* RequestManager.swift in Sources */,
 				69E2C4E72A57CAF800862210 /* PostsRequest.swift in Sources */,
 				699A896C2A58C1E8007761AA /* CommentListView.swift in Sources */,

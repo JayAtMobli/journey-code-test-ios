@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct CodingTestApp: App {
+    
     var body: some Scene {
         WindowGroup {
             HomeCoordinatorView()
