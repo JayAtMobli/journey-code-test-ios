@@ -30,7 +30,7 @@ class ApiManager: ApiManagerProtocol {
         }
     }
     
-    private func handleResponse(data: Data, response: URLResponse) -> Result<Data, Error> {
+    func handleResponse(data: Data, response: URLResponse) -> Result<Data, Error> {
         guard let httpURLResponse = response as? HTTPURLResponse else {
             return Result.failure(NetworkError.invalidServerResponse)
         }
