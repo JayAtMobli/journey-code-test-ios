@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct PostListView: View {
+    @ObservedObject var viewModel: PostListViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.posts) { post in
+            LazyVStack(alignment: .leading, spacing: 10.0) {
+                Text(post.title ?? "")
+                    .font(.headline)
+                Text(post.body ?? "")
+                    .font(.footnote)
+            }
+            .onNavigation {
+                viewModel.onPostSelection(post)
+            }
+        }
+        .navigationTitle("Posts")
+        
+        .onAppear {
+            viewModel.ready()
+        }
     }
 }
 
+
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        PostListView()
+        let coordinator = HomeCoordinator(requestManager: RequestManager())
+        PostListView(viewModel: coordinator.postListViewModel)
     }
 }
+

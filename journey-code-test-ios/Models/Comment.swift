@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Comment: Codable {
+struct Comment: Codable, Identifiable {
     var postId: Int
     var id: Int
     var name: String?
