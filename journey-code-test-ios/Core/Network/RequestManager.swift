@@ -27,7 +27,7 @@ final class RequestManager: RequestManagerProtocol {
 
     func perform<T: Decodable>(_ request: RequestProtocol) async -> RequestResult<T> {
         do {
-            /* MARK: - This is where I check authToken expiry and refresh it from the the responsible layer
+            /* MARK: - This is where I check authToken expiry and refresh it from the responsible layer
             if request.addAuthorizationToken && !accessTokenManager.isTokenValid() {
                 await accessTokenManager.refreshToken()
             }
