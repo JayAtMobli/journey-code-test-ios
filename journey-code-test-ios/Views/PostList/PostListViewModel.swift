@@ -11,11 +11,19 @@ import Foundation
 class PostListViewModel: ObservableObject {
     // MARK: - properties
     private let requestManager: any RequestManagerProtocol
+    private unowned let coordinator: HomeCoordinator
     @Published private(set) var posts: [Post] = []
+    var onPostSelection: (Post)->Void {
+        return { [weak self] post in
+            guard let self = self else { return }
+            self.coordinator.openCommentList(post: post)
+        }
+    }
     
     // MARK: initialiser
-    init(requestManager: any RequestManagerProtocol) {
+    init(requestManager: any RequestManagerProtocol, coordinator: HomeCoordinator) {
         self.requestManager = requestManager
+        self.coordinator = coordinator
     }
     
     // MARK: functions
