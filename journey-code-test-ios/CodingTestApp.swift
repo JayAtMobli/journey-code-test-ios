@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct CodingTestApp: App {
+    @StateObject var coordinator = HomeCoordinator(requestManager: RequestManager())
     
     var body: some Scene {
         WindowGroup {
-            HomeCoordinatorView()
+            HomeCoordinatorView(coordinator: coordinator)
         }
     }
 }

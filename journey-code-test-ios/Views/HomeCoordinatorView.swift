@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct HomeCoordinatorView: View {
+    @ObservedObject var coordinator: HomeCoordinator
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            PostListView(viewModel: coordinator.postListViewModel)
+                .navigation(item: $coordinator.commentListViewModel) { viewModel in
+                    commentListView(viewModel: viewModel)
+                }
+        }
+    }
+    
+    @ViewBuilder
+    private func commentListView(viewModel: CommentListViewModel) -> some View {
+        CommentListView(viewModel: viewModel)
     }
 }
 
+
 struct HomeCoordinatorView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCoordinatorView()
+        let coordinator = HomeCoordinator(requestManager: RequestManager())
+        HomeCoordinatorView(coordinator: coordinator)
     }
 }
+
