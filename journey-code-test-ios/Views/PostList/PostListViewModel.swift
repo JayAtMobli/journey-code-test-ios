@@ -20,6 +20,16 @@ class PostListViewModel: ObservableObject {
         }
     }
     
+    // MARK: - search logic
+    @Published var searchTerms: String = ""
+    var filteredPosts: [Post] {
+        guard !searchTerms.isEmpty else { return posts }
+        return posts.filter { post in
+            (post.title ?? "").lowercased().contains(searchTerms.lowercased()) ||
+            (post.body ?? "").lowercased().contains(searchTerms.lowercased())
+        }
+    }
+    
     // MARK: initialiser
     init(requestManager: any RequestManagerProtocol, coordinator: HomeCoordinator) {
         self.requestManager = requestManager

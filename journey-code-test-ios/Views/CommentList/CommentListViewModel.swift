@@ -14,6 +14,17 @@ class CommentListViewModel: ObservableObject {
     private let requestManager: any RequestManagerProtocol
     @Published private(set) var comments: [Comment] = []
     
+    // MARK: - search logic
+    @Published var searchTerms: String = ""
+    var filteredComments: [Comment] {
+        guard !searchTerms.isEmpty else { return comments }
+        return comments.filter { comment in
+            (comment.name ?? "").lowercased().contains(searchTerms.lowercased()) ||
+            (comment.email ?? "").lowercased().contains(searchTerms.lowercased()) ||
+            (comment.body ?? "").lowercased().contains(searchTerms.lowercased())
+        }
+    }
+    
     // MARK: initialiser
     init(selectedPost: Post, requestManager: any RequestManagerProtocol) {
         self.selectedPost = selectedPost

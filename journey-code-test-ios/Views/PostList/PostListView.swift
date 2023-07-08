@@ -12,7 +12,7 @@ struct PostListView: View {
     @EnvironmentObject var localizationManager: LocalizationManager
     
     var body: some View {
-        List(viewModel.posts) { post in
+        List(viewModel.filteredPosts) { post in
             LazyVStack(alignment: .leading, spacing: 10.0) {
                 Text(post.title ?? "")
                     .font(.headline)
@@ -24,6 +24,7 @@ struct PostListView: View {
             }
         }
         .navigationTitle(localizationManager.postListViewTitle)
+        .searchable(text: $viewModel.searchTerms)
         
         .onAppear {
             viewModel.ready()

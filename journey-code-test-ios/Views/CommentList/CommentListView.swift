@@ -12,7 +12,7 @@ struct CommentListView: View {
     @EnvironmentObject var localizationManager: LocalizationManager
     
     var body: some View {
-        List(viewModel.comments) { comment in
+        List(viewModel.filteredComments) { comment in
             LazyVStack(alignment: .leading, spacing: 10.0) {
                 VStack(alignment: .leading, spacing: 5.0) {
                     Text(comment.name ?? "")
@@ -26,6 +26,7 @@ struct CommentListView: View {
             }
         }
         .navigationTitle(localizationManager.commentListViewTitle)
+        .searchable(text: $viewModel.searchTerms)
         
         .onAppear {
             viewModel.ready()
