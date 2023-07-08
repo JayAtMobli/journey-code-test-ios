@@ -17,6 +17,7 @@ struct HomeCoordinatorView: View {
                     commentListView(viewModel: viewModel)
                 }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     @ViewBuilder
