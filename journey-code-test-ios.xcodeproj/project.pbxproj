@@ -23,6 +23,7 @@
 		699A89812A59071A007761AA /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A897F2A59071A007761AA /* LocalizationManager.swift */; };
 		699A89862A5907EB007761AA /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89852A5907EB007761AA /* Localization.swift */; };
 		699A89872A5907EB007761AA /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89852A5907EB007761AA /* Localization.swift */; };
+		699A898A2A590F8A007761AA /* LocalizationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89892A590F8A007761AA /* LocalizationManagerTests.swift */; };
 		69E2C4BD2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4BE2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4C32A57A7E500862210 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4C22A57A7E500862210 /* Post.swift */; };
@@ -91,6 +92,7 @@
 		699A897D2A590608007761AA /* default-localization.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "default-localization.json"; sourceTree = "<group>"; };
 		699A897F2A59071A007761AA /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManager.swift; sourceTree = "<group>"; };
 		699A89852A5907EB007761AA /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		699A89892A590F8A007761AA /* LocalizationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationManagerTests.swift; sourceTree = "<group>"; };
 		69E2C4B82A57912100862210 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		69E2C4B92A57913200862210 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		69E2C4BB2A57937C00862210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				69E2C5012A57D16F00862210 /* DataParserTests.swift */,
 				69E2C5032A57D44300862210 /* ApiManagerTests.swift */,
 				69E2C5052A57D75500862210 /* RequestManagerTests.swift */,
+				699A89892A590F8A007761AA /* LocalizationManagerTests.swift */,
 			);
 			path = "journey-code-test-iosTests";
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				69E2C4DB2A57BB5F00862210 /* ApiManager.swift in Sources */,
 				69E2C4C42A57A7E500862210 /* Post.swift in Sources */,
 				69E2C4D62A57B35D00862210 /* NetworkError.swift in Sources */,
+				699A898A2A590F8A007761AA /* LocalizationManagerTests.swift in Sources */,
 				6925DE802A578C78003A8739 /* journey_code_test_iosTests.swift in Sources */,
 				69E2C5062A57D75500862210 /* RequestManagerTests.swift in Sources */,
 				69E2C4BE2A5794F500862210 /* Bundle.swift in Sources */,
