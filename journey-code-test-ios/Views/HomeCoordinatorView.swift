@@ -30,6 +30,7 @@ struct HomeCoordinatorView_Previews: PreviewProvider {
     static var previews: some View {
         let coordinator = HomeCoordinator(requestManager: RequestManager())
         HomeCoordinatorView(coordinator: coordinator)
+            .environmentObject(LocalizationManager())
     }
 }
 

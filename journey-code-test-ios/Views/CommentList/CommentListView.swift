@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CommentListView: View {
     @ObservedObject var viewModel: CommentListViewModel
+    @EnvironmentObject var localizationManager: LocalizationManager
     
     var body: some View {
         List(viewModel.comments) { comment in
@@ -24,7 +25,7 @@ struct CommentListView: View {
                     .font(.footnote)
             }
         }
-        .navigationTitle("Comments")
+        .navigationTitle(localizationManager.commentListViewTitle)
         
         .onAppear {
             viewModel.ready()
@@ -38,6 +39,7 @@ struct CommentListView_Previews: PreviewProvider {
         let post = Post(userId: 1, id: 1)
         let viewModel = CommentListViewModel(selectedPost: post, requestManager: RequestManager())
         CommentListView(viewModel: viewModel)
+            .environmentObject(LocalizationManager())
     }
 }
 
