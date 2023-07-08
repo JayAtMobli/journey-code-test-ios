@@ -13,12 +13,7 @@ struct PostListView: View {
     
     var body: some View {
         List(viewModel.filteredPosts) { post in
-            LazyVStack(alignment: .leading, spacing: 10.0) {
-                Text(post.title ?? "")
-                    .font(.headline)
-                Text(post.body ?? "")
-                    .font(.footnote)
-            }
+            PostListCell(post: post)
             .onNavigation {
                 viewModel.onPostSelection(post)
             }
@@ -32,6 +27,18 @@ struct PostListView: View {
     }
 }
 
+struct PostListCell: View {
+    let post: Post
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10.0) {
+            Text(post.title ?? "")
+                .font(.headline)
+            Text(post.body ?? "")
+                .font(.footnote)
+        }
+    }
+}
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
@@ -40,4 +47,3 @@ struct PostListView_Previews: PreviewProvider {
             .environmentObject(LocalizationManager())
     }
 }
-
