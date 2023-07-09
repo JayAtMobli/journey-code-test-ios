@@ -23,6 +23,7 @@ class HomeCoordinator: ObservableObject {
 }
 
 extension HomeCoordinator {
+    // MARK: - Functions
     func openCommentList(post: Post) {
         self.commentListViewModel = .init(selectedPost: post, requestManager: self.requestManager)
     }

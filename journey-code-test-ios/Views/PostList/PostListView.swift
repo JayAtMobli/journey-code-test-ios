@@ -14,9 +14,9 @@ struct PostListView: View {
     var body: some View {
         List(viewModel.filteredPosts) { post in
             PostListCell(post: post)
-            .onNavigation {
-                viewModel.onPostSelection(post)
-            }
+                .onNavigation {
+                    viewModel.onPostSelection(post)
+                }
         }
         .navigationTitle(localizationManager.postListViewTitle)
         .searchable(text: $viewModel.searchTerms)

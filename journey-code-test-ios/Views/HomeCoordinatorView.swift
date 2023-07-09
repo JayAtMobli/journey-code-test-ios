@@ -17,9 +17,10 @@ struct HomeCoordinatorView: View {
                     commentListView(viewModel: viewModel)
                 }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(.stack)
     }
     
+    // MARK: - view builders for child views
     @ViewBuilder
     private func commentListView(viewModel: CommentListViewModel) -> some View {
         CommentListView(viewModel: viewModel)

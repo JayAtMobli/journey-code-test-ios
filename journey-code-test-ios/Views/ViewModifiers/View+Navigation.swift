@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension View {
+    // MARK: - create a navigation link with custom action attached
     func onNavigation(_ action: @escaping () -> Void) -> some View {
         let isActive = Binding(
             get: { false },
@@ -25,6 +26,7 @@ extension View {
         }
     }
     
+    // MARK: - create a navigation link with a binding item which works as a activation source
     func navigation<Item, Destination: View>(item: Binding<Item?>, @ViewBuilder destination: (Item) -> Destination) -> some View {
         let isActive = Binding(
             get: { item.wrappedValue != nil },
@@ -39,7 +41,7 @@ extension View {
         }
     }
     
-    func navigation<Destination: View>(isActive: Binding<Bool>, @ViewBuilder destination: () -> Destination) -> some View {
+    private func navigation<Destination: View>(isActive: Binding<Bool>, @ViewBuilder destination: () -> Destination) -> some View {
         overlay(
             NavigationLink(
                 destination: isActive.wrappedValue ? destination() : nil,
@@ -50,20 +52,3 @@ extension View {
     }
 }
 
-extension NavigationLink {
-    init<T: Identifiable, D: View>(item: Binding<T?>, @ViewBuilder destination: (T) -> D, @ViewBuilder label: () -> Label) where Destination == D? {
-        let isActive = Binding(
-            get: { item.wrappedValue != nil },
-            set: { value in
-                if !value {
-                    item.wrappedValue = nil
-                }
-            }
-        )
-        self.init(
-            destination: item.wrappedValue.map(destination),
-            isActive: isActive,
-            label: label
-        )
-    }
-}
