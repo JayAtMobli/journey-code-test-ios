@@ -38,6 +38,7 @@ class PostListViewModel: ObservableObject {
     
     // MARK: functions
     func ready() {
+        guard posts.isEmpty else { return }
         Task {
             await self.getPostList()
         }
