@@ -78,8 +78,6 @@
 		6925DE722A578C78003A8739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6925DE752A578C78003A8739 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6925DE7B2A578C78003A8739 /* journey-code-test-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "journey-code-test-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6925DE892A578C78003A8739 /* journey_code_test_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journey_code_test_iosUITests.swift; sourceTree = "<group>"; };
-		6925DE8B2A578C78003A8739 /* journey_code_test_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journey_code_test_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		699A89692A58C1CE007761AA /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		699A896B2A58C1E8007761AA /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				69E2C4BA2A57913C00862210 /* Config */,
 				6925DE6D2A578C77003A8739 /* journey-code-test-ios */,
 				6925DE7E2A578C78003A8739 /* journey-code-test-iosTests */,
-				6925DE882A578C78003A8739 /* journey-code-test-iosUITests */,
 				6925DE6C2A578C77003A8739 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -189,15 +186,6 @@
 				699A89892A590F8A007761AA /* LocalizationManagerTests.swift */,
 			);
 			path = "journey-code-test-iosTests";
-			sourceTree = "<group>";
-		};
-		6925DE882A578C78003A8739 /* journey-code-test-iosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6925DE892A578C78003A8739 /* journey_code_test_iosUITests.swift */,
-				6925DE8B2A578C78003A8739 /* journey_code_test_iosUITestsLaunchTests.swift */,
-			);
-			path = "journey-code-test-iosUITests";
 			sourceTree = "<group>";
 		};
 		699A89662A58BB63007761AA /* Views */ = {

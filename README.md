@@ -1,8 +1,8 @@
-# Coding test iOS app for Journey
+# Coding test iOS app
 
 ---
 
-This small app project was created for coding test requested by Journey-Digital.
+This small app project was created for coding test.
 
 ## Requirements
 
