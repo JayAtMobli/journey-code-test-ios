@@ -26,9 +26,7 @@
 		69E2C4BD2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4BE2A5794F500862210 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4BC2A5794F500862210 /* Bundle.swift */; };
 		69E2C4C32A57A7E500862210 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4C22A57A7E500862210 /* Post.swift */; };
-		69E2C4C42A57A7E500862210 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4C22A57A7E500862210 /* Post.swift */; };
 		69E2C4C72A57A8A600862210 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4C62A57A8A600862210 /* Comment.swift */; };
-		69E2C4C82A57A8A600862210 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4C62A57A8A600862210 /* Comment.swift */; };
 		69E2C4CD2A57AF4400862210 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4CC2A57AF4400862210 /* RequestType.swift */; };
 		69E2C4CE2A57AF4400862210 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4CC2A57AF4400862210 /* RequestType.swift */; };
 		69E2C4D12A57AF6A00862210 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E2C4D02A57AF6A00862210 /* RequestProtocol.swift */; };
@@ -159,7 +157,6 @@
 				69E2C4BB2A57937C00862210 /* Info.plist */,
 				6925DE6E2A578C77003A8739 /* CodingTestApp.swift */,
 				699A89662A58BB63007761AA /* Views */,
-				69E2C4C12A57A22D00862210 /* Models */,
 				69E2C4CA2A57A97E00862210 /* Core */,
 				6925DE722A578C78003A8739 /* Assets.xcassets */,
 				6925DE742A578C78003A8739 /* Preview Content */,
@@ -188,6 +185,14 @@
 			path = "journey-code-test-iosTests";
 			sourceTree = "<group>";
 		};
+		6969DE152A60B01F00428C83 /* Utilitities */ = {
+			isa = PBXGroup;
+			children = (
+				69E2C4FB2A57CF6A00862210 /* Utils.swift */,
+			);
+			path = Utilitities;
+			sourceTree = "<group>";
+		};
 		699A89662A58BB63007761AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,8 +208,9 @@
 		699A896D2A58C200007761AA /* PostList */ = {
 			isa = PBXGroup;
 			children = (
-				699A89692A58C1CE007761AA /* PostListView.swift */,
+				69E2C4C22A57A7E500862210 /* Post.swift */,
 				699A89732A58C4A9007761AA /* PostListViewModel.swift */,
+				699A89692A58C1CE007761AA /* PostListView.swift */,
 			);
 			path = PostList;
 			sourceTree = "<group>";
@@ -212,8 +218,9 @@
 		699A896E2A58C218007761AA /* CommentList */ = {
 			isa = PBXGroup;
 			children = (
-				699A896B2A58C1E8007761AA /* CommentListView.swift */,
+				69E2C4C62A57A8A600862210 /* Comment.swift */,
 				699A89752A58C4D4007761AA /* CommentListViewModel.swift */,
+				699A896B2A58C1E8007761AA /* CommentListView.swift */,
 			);
 			path = CommentList;
 			sourceTree = "<group>";
@@ -253,22 +260,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		69E2C4C12A57A22D00862210 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				69E2C4C22A57A7E500862210 /* Post.swift */,
-				69E2C4C62A57A8A600862210 /* Comment.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		69E2C4CA2A57A97E00862210 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				699A897C2A59043B007761AA /* Localisation */,
 				69E2C4CB2A57AEC000862210 /* Network */,
 				69E2C4C02A57953500862210 /* Extensions */,
-				69E2C4FB2A57CF6A00862210 /* Utils.swift */,
+				6969DE152A60B01F00428C83 /* Utilitities */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -455,7 +453,6 @@
 			files = (
 				699A89812A59071A007761AA /* LocalizationManager.swift in Sources */,
 				69E2C4DB2A57BB5F00862210 /* ApiManager.swift in Sources */,
-				69E2C4C42A57A7E500862210 /* Post.swift in Sources */,
 				69E2C4D62A57B35D00862210 /* NetworkError.swift in Sources */,
 				699A898A2A590F8A007761AA /* LocalizationManagerTests.swift in Sources */,
 				69E2C5062A57D75500862210 /* RequestManagerTests.swift in Sources */,
@@ -467,7 +464,6 @@
 				69E2C4DF2A57C46200862210 /* RequestManager.swift in Sources */,
 				699A89872A5907EB007761AA /* Localization.swift in Sources */,
 				69E2C4E82A57CAF800862210 /* PostsRequest.swift in Sources */,
-				69E2C4C82A57A8A600862210 /* Comment.swift in Sources */,
 				69E2C50C2A57D9C600862210 /* MockCommentsRequest.swift in Sources */,
 				69E2C5002A57D00800862210 /* UtilsTest.swift in Sources */,
 				69E2C5082A57D83700862210 /* MockApiManager.swift in Sources */,
