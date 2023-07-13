@@ -20,7 +20,9 @@ struct PostListView: View {
         }
         .navigationTitle(localizationManager.postListViewTitle)
         .searchable(text: $viewModel.searchTerms)
-        
+        .refreshable {
+            viewModel.refresh()
+        }
         .onAppear {
             viewModel.ready()
         }

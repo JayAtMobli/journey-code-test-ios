@@ -33,6 +33,13 @@ class CommentListViewModel: ObservableObject {
     
     // MARK: functions
     func ready() {
+        guard comments.isEmpty else { return }
+        Task {
+            await getComments()
+        }
+    }
+    
+    func refresh() {
         Task {
             await getComments()
         }

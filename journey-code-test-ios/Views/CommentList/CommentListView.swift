@@ -17,7 +17,9 @@ struct CommentListView: View {
         }
         .navigationTitle(localizationManager.commentListViewTitle)
         .searchable(text: $viewModel.searchTerms)
-        
+        .refreshable {
+            viewModel.refresh()
+        }
         .onAppear {
             viewModel.ready()
         }

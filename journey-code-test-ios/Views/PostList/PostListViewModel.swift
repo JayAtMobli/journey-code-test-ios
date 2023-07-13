@@ -43,6 +43,12 @@ class PostListViewModel: ObservableObject {
             await self.getPostList()
         }
     }
+    
+    func refresh() {
+        Task {
+            await self.getPostList()
+        }
+    }
 }
 
 extension PostListViewModel {
