@@ -17,6 +17,7 @@
 		6925DE762A578C78003A8739 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6925DE752A578C78003A8739 /* Preview Assets.xcassets */; };
 		69291CAD2A62474500873A1B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69291CAC2A62474500873A1B /* NetworkService.swift */; };
 		69291CB02A62500D00873A1B /* MockedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69291CAF2A62500D00873A1B /* MockedService.swift */; };
+		693457FB2A6339E100550A6F /* HomeCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693457FA2A6339E100550A6F /* HomeCoordinatorTests.swift */; };
 		699A896A2A58C1CE007761AA /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89692A58C1CE007761AA /* PostListView.swift */; };
 		699A896C2A58C1E8007761AA /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896B2A58C1E8007761AA /* CommentListView.swift */; };
 		699A89702A58C26A007761AA /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */; };
@@ -72,6 +73,7 @@
 		6925DE7B2A578C78003A8739 /* coding-test-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "coding-test-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69291CAC2A62474500873A1B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		69291CAF2A62500D00873A1B /* MockedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedService.swift; sourceTree = "<group>"; };
+		693457FA2A6339E100550A6F /* HomeCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorTests.swift; sourceTree = "<group>"; };
 		699A89692A58C1CE007761AA /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		699A896B2A58C1E8007761AA /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				69E2C5032A57D44300862210 /* ApiManagerTests.swift */,
 				69E2C5052A57D75500862210 /* RequestManagerTests.swift */,
 				699A89892A590F8A007761AA /* LocalizationManagerTests.swift */,
+				693457FA2A6339E100550A6F /* HomeCoordinatorTests.swift */,
 				6920C9112A6251B20030BCC1 /* PostListViewModelTests.swift */,
 				6920C9202A6264380030BCC1 /* CommentListViewModelTests.swift */,
 			);
@@ -473,6 +476,7 @@
 				69E2C5062A57D75500862210 /* RequestManagerTests.swift in Sources */,
 				69291CB02A62500D00873A1B /* MockedService.swift in Sources */,
 				69E2C5042A57D44300862210 /* ApiManagerTests.swift in Sources */,
+				693457FB2A6339E100550A6F /* HomeCoordinatorTests.swift in Sources */,
 				6920C9122A6251B20030BCC1 /* PostListViewModelTests.swift in Sources */,
 				69E2C50C2A57D9C600862210 /* MockCommentsRequest.swift in Sources */,
 				69E2C5002A57D00800862210 /* UtilsTest.swift in Sources */,
