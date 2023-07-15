@@ -132,8 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				69E2C4BA2A57913C00862210 /* Config */,
-				6925DE6D2A578C77003A8739 /* journey-code-test-ios */,
-				6925DE7E2A578C78003A8739 /* journey-code-test-iosTests */,
+				6925DE6D2A578C77003A8739 /* coding-test-app */,
+				6925DE7E2A578C78003A8739 /* coding-test-appTests */,
 				6925DE6C2A578C77003A8739 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6925DE6D2A578C77003A8739 /* journey-code-test-ios */ = {
+		6925DE6D2A578C77003A8739 /* coding-test-app */ = {
 			isa = PBXGroup;
 			children = (
 				69E2C4BB2A57937C00862210 /* Info.plist */,
@@ -157,7 +157,7 @@
 				6925DE722A578C78003A8739 /* Assets.xcassets */,
 				6925DE742A578C78003A8739 /* Preview Content */,
 			);
-			path = "journey-code-test-ios";
+			path = "coding-test-app";
 			sourceTree = "<group>";
 		};
 		6925DE742A578C78003A8739 /* Preview Content */ = {
@@ -168,7 +168,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6925DE7E2A578C78003A8739 /* journey-code-test-iosTests */ = {
+		6925DE7E2A578C78003A8739 /* coding-test-appTests */ = {
 			isa = PBXGroup;
 			children = (
 				69E2C4EE2A57CE1000862210 /* MockData */,
@@ -180,7 +180,7 @@
 				6920C9112A6251B20030BCC1 /* PostListViewModelTests.swift */,
 				6920C9202A6264380030BCC1 /* CommentListViewModelTests.swift */,
 			);
-			path = "journey-code-test-iosTests";
+			path = "coding-test-appTests";
 			sourceTree = "<group>";
 		};
 		695200BE2A62760900FFCA30 /* Services */ = {
