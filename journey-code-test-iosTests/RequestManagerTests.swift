@@ -9,7 +9,7 @@ import XCTest
 @testable import journey_code_test_ios
 
 final class RequestManagerTests: XCTestCase {
-    private var requestManager: (any RequestManagerProtocol)? = nil
+    private var requestManager: RequestManager!
     
     override func setUpWithError() throws {
         let dataParser = DataParser()
@@ -22,32 +22,32 @@ final class RequestManagerTests: XCTestCase {
     }
     
     func testGetPosts() async throws {
-        let request = MockPostRequest()
-        guard let result: Result<[Post], Error> = await requestManager?.perform(request) else {
-            XCTFail("Didn't get data from the request manager")
-            return
-        }
+
+            let request = MockPostRequest()
+            let result: Result<[Post], Error> = await requestManager.perform(request)
+            
+            switch result {
+            case .success(let posts):
+                XCTAssertEqual(posts.count, 100)
+            case .failure(let error):
+                XCTFail("Didn't get data from the request manager \(error))")
+            }
+
         
-        switch result {
-        case .success(let posts):
-            XCTAssertEqual(posts.count, 100)
-        case .failure(let error):
-            XCTFail("Didn't get data from the request manager \(error))")
-        }
     }
     
     func testGetComments() async throws {
-        let request = MockCommentsRequest()
-        guard let result: Result<[Comment], Error> = await requestManager?.perform(request) else {
-            XCTFail("Didn't get data from the request manager")
-            return
-        }
+
+            let request = MockCommentsRequest()
+            let result: Result<[Comment], Error> = await requestManager.perform(request)
+            
+            switch result {
+            case .success(let comments):
+                XCTAssertEqual(comments.count, 5)
+            case .failure(let error):
+                XCTFail("Didn't get data from the request manager \(error))")
+            }
+
         
-        switch result {
-        case .success(let comments):
-            XCTAssertEqual(comments.count, 5)
-        case .failure(let error):
-            XCTFail("Didn't get data from the request manager \(error))")
-        }
     }
 }

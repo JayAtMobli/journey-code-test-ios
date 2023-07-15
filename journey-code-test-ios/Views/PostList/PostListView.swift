@@ -44,7 +44,7 @@ struct PostListCell: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        let coordinator = HomeCoordinator(networkService: NetworkService(requestManager: RequestManager()))
+        let coordinator = HomeCoordinator(service: NetworkService(requestManager: RequestManager()))
         PostListView(viewModel: coordinator.postListViewModel)
             .environmentObject(LocalizationManager())
     }

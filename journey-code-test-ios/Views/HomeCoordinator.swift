@@ -10,21 +10,21 @@ import Foundation
 @MainActor
 class HomeCoordinator: ObservableObject {
     // MARK: - Properties
-    private let service: any ServiceProtocol
+    private var service: ServiceProtocol
     @Published var postListViewModel: PostListViewModel!
     @Published var commentListViewModel: CommentListViewModel?
 
     
     // MARK: - Initialiser
-    init(networkService: any ServiceProtocol) {
-        self.service = networkService
-        self.postListViewModel = .init(networkService: networkService, coordinator: self)
+    init(service: ServiceProtocol) {
+        self.service = service
+        self.postListViewModel = .init(service: service, coordinator: self)
     }
 }
 
 extension HomeCoordinator {
     // MARK: - Functions
     func openCommentList(post: Post) {
-        self.commentListViewModel = .init(selectedPost: post, networkService: self.service)
+        self.commentListViewModel = .init(selectedPost: post, service: self.service)
     }
 }

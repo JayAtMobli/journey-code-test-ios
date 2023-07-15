@@ -11,7 +11,7 @@ import Foundation
 class CommentListViewModel: ObservableObject {
     // MARK: - properties
     private let selectedPost: Post
-    private let service: any ServiceProtocol
+    private var service: ServiceProtocol
     @Published private(set) var comments: [Comment] = []
     
     // MARK: - search logic
@@ -26,34 +26,36 @@ class CommentListViewModel: ObservableObject {
     }
     
     // MARK: initialiser
-    init(selectedPost: Post, networkService: any ServiceProtocol) {
+    init(selectedPost: Post, service: ServiceProtocol) {
         self.selectedPost = selectedPost
-        self.service = networkService
+        self.service = service
     }
     
     // MARK: functions
     func ready() {
         guard comments.isEmpty else { return }
-        getComments()
+        Task {
+            await getComments()
+        }
     }
     
     func refresh() {
-        getComments()
+        Task {
+            await getComments()
+        }
     }
 }
 
 
 extension CommentListViewModel {
     // MARK: api calls
-    fileprivate func getComments() {
-        Task {
-            let result = await service.getComments(postId: selectedPost.id)
-            switch result {
-            case .success(let comments):
-                self.comments = comments
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+    func getComments() async {
+        let result = await service.getComments(postId: selectedPost.id)
+        switch result {
+        case .success(let comments):
+            self.comments = comments
+        case .failure(let error):
+            print(error.localizedDescription)
         }
     }
 }

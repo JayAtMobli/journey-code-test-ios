@@ -6,6 +6,7 @@
 //
 
 import Foundation
+@testable import journey_code_test_ios
 
 struct MockPostRequest: RequestProtocol {
     var host: String {

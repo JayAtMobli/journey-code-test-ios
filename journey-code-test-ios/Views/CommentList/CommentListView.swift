@@ -47,7 +47,7 @@ struct CommentListCell: View {
 struct CommentListView_Previews: PreviewProvider {
     static var previews: some View {
         let post = Post(userId: 1, id: 1)
-        let viewModel = CommentListViewModel(selectedPost: post, networkService: NetworkService(requestManager: RequestManager()))
+        let viewModel = CommentListViewModel(selectedPost: post, service: NetworkService(requestManager: RequestManager()))
         CommentListView(viewModel: viewModel)
             .environmentObject(LocalizationManager())
     }
