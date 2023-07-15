@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 class PostListViewModel: ObservableObject {
     // MARK: - properties
-    private let requestManager: any RequestManagerProtocol
+    private let service: any ServiceProtocol
     private unowned let coordinator: HomeCoordinator
     @Published private(set) var posts: [Post] = []
     var onPostSelection: (Post)->Void {
@@ -31,36 +31,33 @@ class PostListViewModel: ObservableObject {
     }
     
     // MARK: initialiser
-    init(requestManager: any RequestManagerProtocol, coordinator: HomeCoordinator) {
-        self.requestManager = requestManager
+    init(networkService: any ServiceProtocol, coordinator: HomeCoordinator) {
+        self.service = networkService
         self.coordinator = coordinator
     }
     
     // MARK: functions
     func ready() {
         guard posts.isEmpty else { return }
-        Task {
-            await self.getPostList()
-        }
+        getPosts()
     }
     
     func refresh() {
-        Task {
-            await self.getPostList()
-        }
+        getPosts()
     }
 }
 
 extension PostListViewModel {
     // MARK: api calls
-    fileprivate func getPostList() async {
-        let request = GetPostsRequest()
-        let result: RequestResult<[Post]> = await requestManager.perform(request)
-        switch result {
-        case .success(let posts):
-            self.posts = posts
-        case .failure(let error):
-            print(error.localizedDescription)
+    fileprivate func getPosts() {
+        Task {
+            let result = await service.getPostList()
+            switch result {
+            case .success(let posts):
+                self.posts = posts
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
 }

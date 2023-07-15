@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct CodingTestApp: App {
-    @StateObject var coordinator = HomeCoordinator(requestManager: RequestManager())
+    @StateObject var coordinator = HomeCoordinator(networkService: NetworkService(requestManager: RequestManager()))
     @StateObject var localizationManager = LocalizationManager()
     
     var body: some Scene {

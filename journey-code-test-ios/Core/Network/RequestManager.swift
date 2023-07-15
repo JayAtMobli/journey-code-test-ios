@@ -8,12 +8,13 @@
 import Foundation
 
 typealias RequestResult<T> = Result<T, Error>
-
+/*
 protocol RequestManagerProtocol {
     func perform<T: Decodable>(_ request: RequestProtocol) async -> RequestResult<T>
 }
+*/
 
-final class RequestManager: RequestManagerProtocol {
+final class RequestManager {
     let apiManager: ApiManagerProtocol
     let parser: DataParserProtocol
 

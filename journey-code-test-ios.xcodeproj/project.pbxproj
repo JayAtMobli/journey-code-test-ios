@@ -10,6 +10,8 @@
 		6925DE6F2A578C77003A8739 /* CodingTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925DE6E2A578C77003A8739 /* CodingTestApp.swift */; };
 		6925DE732A578C78003A8739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6925DE722A578C78003A8739 /* Assets.xcassets */; };
 		6925DE762A578C78003A8739 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6925DE752A578C78003A8739 /* Preview Assets.xcassets */; };
+		69291CAD2A62474500873A1B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69291CAC2A62474500873A1B /* NetworkService.swift */; };
+		69291CAE2A62474500873A1B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69291CAC2A62474500873A1B /* NetworkService.swift */; };
 		699A896A2A58C1CE007761AA /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A89692A58C1CE007761AA /* PostListView.swift */; };
 		699A896C2A58C1E8007761AA /* CommentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896B2A58C1E8007761AA /* CommentListView.swift */; };
 		699A89702A58C26A007761AA /* HomeCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */; };
@@ -76,6 +78,7 @@
 		6925DE722A578C78003A8739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6925DE752A578C78003A8739 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6925DE7B2A578C78003A8739 /* journey-code-test-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "journey-code-test-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69291CAC2A62474500873A1B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		699A89692A58C1CE007761AA /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		699A896B2A58C1E8007761AA /* CommentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListView.swift; sourceTree = "<group>"; };
 		699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorView.swift; sourceTree = "<group>"; };
@@ -275,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				69E2C4E52A57CAC900862210 /* Requests */,
+				69291CAC2A62474500873A1B /* NetworkService.swift */,
 				69E2C4DD2A57C46200862210 /* RequestManager.swift */,
 				69E2C4D92A57BB5F00862210 /* ApiManager.swift */,
 				69E2C4E12A57C74F00862210 /* DataParser.swift */,
@@ -424,6 +428,7 @@
 			files = (
 				699A89802A59071A007761AA /* LocalizationManager.swift in Sources */,
 				69E2C4C72A57A8A600862210 /* Comment.swift in Sources */,
+				69291CAD2A62474500873A1B /* NetworkService.swift in Sources */,
 				69E2C4DA2A57BB5F00862210 /* ApiManager.swift in Sources */,
 				699A89742A58C4A9007761AA /* PostListViewModel.swift in Sources */,
 				69E2C4E22A57C74F00862210 /* DataParser.swift in Sources */,
@@ -464,6 +469,7 @@
 				69E2C4DF2A57C46200862210 /* RequestManager.swift in Sources */,
 				699A89872A5907EB007761AA /* Localization.swift in Sources */,
 				69E2C4E82A57CAF800862210 /* PostsRequest.swift in Sources */,
+				69291CAE2A62474500873A1B /* NetworkService.swift in Sources */,
 				69E2C50C2A57D9C600862210 /* MockCommentsRequest.swift in Sources */,
 				69E2C5002A57D00800862210 /* UtilsTest.swift in Sources */,
 				69E2C5082A57D83700862210 /* MockApiManager.swift in Sources */,
