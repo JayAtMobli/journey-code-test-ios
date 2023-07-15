@@ -183,6 +183,15 @@
 			path = "coding-test-appTests";
 			sourceTree = "<group>";
 		};
+		692779592A627ACE0066D994 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */,
+				699A89712A58C390007761AA /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		695200BE2A62760900FFCA30 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,8 +211,7 @@
 		699A89662A58BB63007761AA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				699A896F2A58C26A007761AA /* HomeCoordinatorView.swift */,
-				699A89712A58C390007761AA /* HomeCoordinator.swift */,
+				692779592A627ACE0066D994 /* Home */,
 				699A896D2A58C200007761AA /* PostList */,
 				699A896E2A58C218007761AA /* CommentList */,
 				699A89772A58EAAC007761AA /* ViewModifiers */,
@@ -609,12 +617,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"journey-code-test-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"coding-test-app/Preview Content\"";
 				DEVELOPMENT_TEAM = 2QG987Z4QN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "journey-code-test-ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Journey Test";
+				INFOPLIST_FILE = "coding-test-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CodingTest;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -626,7 +634,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.journey-code-test-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.coding-test-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -642,12 +650,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"journey-code-test-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"coding-test-app/Preview Content\"";
 				DEVELOPMENT_TEAM = 2QG987Z4QN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "journey-code-test-ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Journey Test";
+				INFOPLIST_FILE = "coding-test-app/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = CodingTest;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -659,7 +667,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.journey-code-test-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.coding-test-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -679,7 +687,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.journey-code-test-iosTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.coding-test-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -700,7 +708,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.journey-code-test-iosTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaypark.coding-test-appTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

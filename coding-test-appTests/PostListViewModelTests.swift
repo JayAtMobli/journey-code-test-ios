@@ -1,12 +1,12 @@
 //
 //  PostListViewModelTests.swift
-//  journey-code-test-iosTests
+//  coding-test-appTests
 //
 //  Created by Jay Park on 15/07/23.
 //
 
 import XCTest
-@testable import journey_code_test_ios
+@testable import coding_test_app
 
 
 final class PostListViewModelTests: XCTestCase {
@@ -14,8 +14,8 @@ final class PostListViewModelTests: XCTestCase {
     
     @MainActor override func setUp() {
         let mockedService = MockedService()
-        let coordinator = HomeCoordinator(networkService: mockedService)
-        vm = PostListViewModel(networkService: mockedService, coordinator: coordinator)
+        let coordinator = HomeCoordinator(service: mockedService)
+        vm = PostListViewModel(service: mockedService, coordinator: coordinator)
     }
     
     @MainActor func testViewModelSearchWithSuccess() async {

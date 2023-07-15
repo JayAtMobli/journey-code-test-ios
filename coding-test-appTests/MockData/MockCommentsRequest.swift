@@ -1,12 +1,12 @@
 //
 //  MockCommentsRequest.swift
-//  journey-code-test-iosTests
+//  coding-test-appTests
 //
 //  Created by Jay Park on 7/07/23.
 //
 
 import Foundation
-@testable import journey_code_test_ios
+@testable import coding_test_app
 
 struct MockCommentsRequest: RequestProtocol {
     var host: String {

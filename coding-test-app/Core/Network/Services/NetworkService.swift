@@ -1,6 +1,6 @@
 //
 //  NetworkService.swift
-//  journey-code-test-ios
+//  coding-test-app
 //
 //  Created by Jay Park on 15/07/23.
 //

@@ -1,6 +1,6 @@
 //
 //  HomeCoordinator.swift
-//  journey-code-test-ios
+//  coding-test-app
 //
 //  Created by Jay Park on 8/07/23.
 //

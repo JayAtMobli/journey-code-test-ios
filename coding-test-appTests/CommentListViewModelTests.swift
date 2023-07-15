@@ -1,12 +1,12 @@
 //
 //  CommentListViewModelTests.swift
-//  journey-code-test-iosTests
+//  coding-test-appTests
 //
 //  Created by Jay Park on 15/07/23.
 //
 
 import XCTest
-@testable import journey_code_test_ios
+@testable import coding_test_app
 
 final class CommentListViewModelTests: XCTestCase {
     private var vm: CommentListViewModel!
@@ -14,7 +14,7 @@ final class CommentListViewModelTests: XCTestCase {
     @MainActor override func setUp() {
         let mockedService = MockedService()
         let post = Post(userId: 1, id: 1)
-        vm = CommentListViewModel(selectedPost: post, networkService: mockedService)
+        vm = CommentListViewModel(selectedPost: post, service: mockedService)
     }
 
     @MainActor func testViewModelSearchWithSuccess() async {

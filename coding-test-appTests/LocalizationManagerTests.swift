@@ -1,12 +1,12 @@
 //
 //  LocalizationManagerTests.swift
-//  journey-code-test-iosTests
+//  coding-test-appTests
 //
 //  Created by Jay Park on 8/07/23.
 //
 
 import XCTest
-@testable import journey_code_test_ios
+@testable import coding_test_app
 
 final class LocalizationManagerTests: XCTestCase {
     let localizationManager = LocalizationManager()

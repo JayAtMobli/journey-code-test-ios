@@ -1,12 +1,12 @@
 //
 //  UtilsTest.swift
-//  journey-code-test-iosTests
+//  coding-test-appTests
 //
 //  Created by Jay Park on 7/07/23.
 //
 
 import XCTest
-@testable import journey_code_test_ios
+@testable import coding_test_app
 
 final class UtilsTest: XCTestCase {
     func test_loadJson_Sucess() {

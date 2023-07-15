@@ -1,6 +1,6 @@
 //
 //  RequestType.swift
-//  journey-code-test-ios
+//  coding-test-app
 //
 //  Created by Jay Park on 7/07/23.
 //
