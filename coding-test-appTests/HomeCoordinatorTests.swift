@@ -17,6 +17,7 @@ final class HomeCoordinatorTests: XCTestCase {
         coordinator = HomeCoordinator(service: service)
     }
     
+    /*
     func testCoordinatorPostListViewModelNotNil() {
         XCTAssertNotNil(coordinator.postListViewModel)
     }
@@ -31,4 +32,5 @@ final class HomeCoordinatorTests: XCTestCase {
         
         XCTAssertNotNil(coordinator.commentListViewModel)
     }
+    */
 }

@@ -11,14 +11,7 @@ import Foundation
 class PostListViewModel: ObservableObject {
     // MARK: - properties
     private var service: ServiceProtocol
-    private unowned let coordinator: HomeCoordinator
     @Published private(set) var posts: [Post] = []
-    var onPostSelection: (Post)->Void {
-        return { [weak self] post in
-            guard let self = self else { return }
-            self.coordinator.openCommentList(post: post)
-        }
-    }
     
     // MARK: - search logic
     @Published var searchTerms: String = ""
@@ -31,9 +24,8 @@ class PostListViewModel: ObservableObject {
     }
     
     // MARK: initialiser
-    init(service: ServiceProtocol, coordinator: HomeCoordinator) {
+    init(service: ServiceProtocol) {
         self.service = service
-        self.coordinator = coordinator
     }
     
     // MARK: functions

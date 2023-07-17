@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommentListView: View {
-    @ObservedObject var viewModel: CommentListViewModel
+    @StateObject var viewModel: CommentListViewModel
     @EnvironmentObject var localizationManager: LocalizationManager
     
     var body: some View {
@@ -47,7 +47,8 @@ struct CommentListCell: View {
 struct CommentListView_Previews: PreviewProvider {
     static var previews: some View {
         let post = Post(userId: 1, id: 1)
-        let viewModel = CommentListViewModel(selectedPost: post, service: NetworkService(requestManager: RequestManager()))
+        let service = NetworkService(requestManager: RequestManager())
+        let viewModel = CommentListViewModel(selectedPost: post, service: service)
         CommentListView(viewModel: viewModel)
             .environmentObject(LocalizationManager())
     }
