@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct CommentListView: View {
-    @StateObject var viewModel: CommentListViewModel
+    @StateObject private var viewModel: CommentListViewModel
     @EnvironmentObject var localizationManager: LocalizationManager
+    
+    init(selectedPost: Post, service: ServiceProtocol) {
+        _viewModel = .init(wrappedValue: {CommentListViewModel(selectedPost: selectedPost, service: service)}())
+    }
     
     var body: some View {
         List(viewModel.filteredComments) { comment in
@@ -48,8 +52,7 @@ struct CommentListView_Previews: PreviewProvider {
     static var previews: some View {
         let post = Post(userId: 1, id: 1)
         let service = NetworkService(requestManager: RequestManager())
-        let viewModel = CommentListViewModel(selectedPost: post, service: service)
-        CommentListView(viewModel: viewModel)
+        CommentListView(selectedPost: post, service: service)
             .environmentObject(LocalizationManager())
     }
 }

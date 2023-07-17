@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 class PostListViewModel: ObservableObject {
     // MARK: - properties
-    private var service: ServiceProtocol
+    private let service: ServiceProtocol
     @Published private(set) var posts: [Post] = []
     
     // MARK: - search logic

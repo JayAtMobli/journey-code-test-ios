@@ -34,11 +34,9 @@ extension HomeCoordinator {
     func build(page: Page) -> some View {
         switch page {
         case .postList:
-            let viewModel = PostListViewModel(service: service)
-            PostListView(viewModel: viewModel)
+            PostListView(service: service)
         case .commentList(let post):
-            let viewModel = CommentListViewModel(selectedPost: post, service: service)
-            CommentListView(viewModel: viewModel)
+            CommentListView(selectedPost: post, service: service)
         }
     }
 }

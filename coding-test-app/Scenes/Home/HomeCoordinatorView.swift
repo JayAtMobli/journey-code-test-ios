@@ -28,4 +28,3 @@ struct HomeCoordinatorView_Previews: PreviewProvider {
             .environmentObject(LocalizationManager())
     }
 }
-

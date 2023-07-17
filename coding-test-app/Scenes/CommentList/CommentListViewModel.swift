@@ -11,7 +11,7 @@ import Foundation
 class CommentListViewModel: ObservableObject {
     // MARK: - properties
     private let selectedPost: Post
-    private var service: ServiceProtocol
+    private let service: ServiceProtocol
     @Published private(set) var comments: [Comment] = []
     
     // MARK: - search logic

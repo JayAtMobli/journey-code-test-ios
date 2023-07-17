@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct PostListView: View {
-    @StateObject var viewModel: PostListViewModel
+    @StateObject private var viewModel: PostListViewModel
     @EnvironmentObject var localizationManager: LocalizationManager
+    
+    init(service: ServiceProtocol) {
+        _viewModel = .init(wrappedValue: {PostListViewModel(service: service)}())
+    }
     
     var body: some View {
         List(viewModel.filteredPosts) { post in
@@ -43,8 +47,7 @@ struct PostListCell: View {
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
         let service = NetworkService(requestManager: RequestManager())
-        let viewModel = PostListViewModel(service: service)
-        PostListView(viewModel: viewModel)
+        PostListView(service: service)
             .environmentObject(LocalizationManager())
     }
 }
