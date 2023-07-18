@@ -6,7 +6,6 @@
 //
 
 import Foundation
-@testable import coding_test_app
 
 struct MockApiManager: ApiManagerProtocol {
     func perform(_ request: URLRequest) async -> Result<Data, Error> {

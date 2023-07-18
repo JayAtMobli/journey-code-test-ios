@@ -23,7 +23,7 @@ struct HomeCoordinatorView: View {
 
 struct HomeCoordinatorView_Previews: PreviewProvider {
     static var previews: some View {
-        let coordinator = HomeCoordinator(service: NetworkService(requestManager: RequestManager()))
+        let coordinator = HomeCoordinator(service: MockedService())
         HomeCoordinatorView(coordinator: coordinator)
             .environmentObject(LocalizationManager())
     }

@@ -1,20 +1,19 @@
 //
-//  MockCommentsRequest.swift
+//  MockPostsRequest.swift
 //  coding-test-appTests
 //
 //  Created by Jay Park on 7/07/23.
 //
 
 import Foundation
-@testable import coding_test_app
 
-struct MockCommentsRequest: RequestProtocol {
+struct MockPostRequest: RequestProtocol {
     var host: String {
         ""
     }
     
     var path: String {
-        guard let path = Bundle.main.path(forResource: "commentsMock", ofType: "json") else { return "" }
+        guard let path = Bundle.main.path(forResource: "postsMock", ofType: "json") else { return "" }
         return path
     }
     

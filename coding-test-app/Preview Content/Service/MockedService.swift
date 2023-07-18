@@ -6,7 +6,7 @@
 //
 
 import Foundation
-@testable import coding_test_app
+//@testable import coding_test_app
 
 class MockedService: ServiceProtocol {
     private let requestManager: RequestManager

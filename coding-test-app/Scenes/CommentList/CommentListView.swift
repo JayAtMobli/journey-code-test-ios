@@ -51,8 +51,7 @@ struct CommentListCell: View {
 struct CommentListView_Previews: PreviewProvider {
     static var previews: some View {
         let post = Post(userId: 1, id: 1)
-        let service = NetworkService(requestManager: RequestManager())
-        CommentListView(selectedPost: post, service: service)
+        CommentListView(selectedPost: post, service: MockedService())
             .environmentObject(LocalizationManager())
     }
 }

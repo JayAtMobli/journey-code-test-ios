@@ -46,8 +46,7 @@ struct PostListCell: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        let service = NetworkService(requestManager: RequestManager())
-        PostListView(service: service)
+        PostListView(service: MockedService())
             .environmentObject(LocalizationManager())
     }
 }
