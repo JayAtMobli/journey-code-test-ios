@@ -19,7 +19,7 @@ enum Page: Hashable {
 @MainActor
 class HomeCoordinator: ObservableObject {
     // MARK: - Properties
-    private var service: ServiceProtocol
+    private let service: ServiceProtocol
     @Published var path = NavigationPath()
     
     // MARK: - Initialiser
