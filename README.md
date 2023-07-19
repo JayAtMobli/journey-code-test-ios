@@ -61,4 +61,9 @@ The coordinator is responsible for creating and managing view models for the ass
 I have implemented unit testing for the core functions, although there isn't much logic to test in this small project.
 
 
+## Updated code for iOS 16
 
+---
+
+NavigationView and NavigationLink(destination: isActive: label:) were deprecated in iOS 16.
+I have implemented changes in "iOS16" branch.
