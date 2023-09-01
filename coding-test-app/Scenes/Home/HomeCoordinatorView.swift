@@ -8,31 +8,23 @@
 import SwiftUI
 
 struct HomeCoordinatorView: View {
-    @ObservedObject var coordinator: HomeCoordinator
+    @StateObject var coordinator = HomeCoordinator(service: NetworkService(requestManager: RequestManager()))
     
     var body: some View {
-        NavigationView {
-            PostListView(viewModel: coordinator.postListViewModel)
-                .navigation(item: $coordinator.commentListViewModel) { viewModel in
-                    commentListView(viewModel: viewModel)
+        NavigationStack(path: $coordinator.path) {
+            coordinator.build(page: .postList)
+                .navigationDestination(for: Page.self) { page in
+                    coordinator.build(page: page)
                 }
         }
-        .navigationViewStyle(.stack)
-    }
-    
-    // MARK: - view builders for child views
-    @ViewBuilder
-    private func commentListView(viewModel: CommentListViewModel) -> some View {
-        CommentListView(viewModel: viewModel)
     }
 }
 
 
 struct HomeCoordinatorView_Previews: PreviewProvider {
     static var previews: some View {
-        let coordinator = HomeCoordinator(service: NetworkService(requestManager: RequestManager()))
+        let coordinator = HomeCoordinator(service: MockedService())
         HomeCoordinatorView(coordinator: coordinator)
             .environmentObject(LocalizationManager())
     }
 }
-

@@ -14,8 +14,7 @@ final class PostListViewModelTests: XCTestCase {
     
     override func setUp() {
         let mockedService = MockedService()
-        let coordinator = HomeCoordinator(service: mockedService)
-        vm = PostListViewModel(service: mockedService, coordinator: coordinator)
+        vm = PostListViewModel(service: mockedService)
     }
     
     func testViewModelGetPostsSuccess() async {

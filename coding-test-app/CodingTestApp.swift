@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct CodingTestApp: App {
-    @StateObject var coordinator = HomeCoordinator(service: NetworkService(requestManager: RequestManager()))
     @StateObject var localizationManager = LocalizationManager()
     
     var body: some Scene {
         WindowGroup {
-            HomeCoordinatorView(coordinator: coordinator)
+            HomeCoordinatorView()
                 .environmentObject(localizationManager)
         }
     }

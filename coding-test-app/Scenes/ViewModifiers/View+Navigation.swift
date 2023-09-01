@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension View {
+    /* Depricated in iOS 16
+    
     // MARK: - create a navigation link with custom action attached
     func onNavigation(_ action: @escaping () -> Void) -> some View {
         let isActive = Binding(
@@ -50,5 +52,6 @@ extension View {
             )
         )
     }
+    */
 }
 

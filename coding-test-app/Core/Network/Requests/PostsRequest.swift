@@ -16,3 +16,18 @@ struct GetPostsRequest: RequestProtocol {
         .GET
     }
 }
+
+struct MockPostRequest: RequestProtocol {
+    var host: String {
+        ""
+    }
+    
+    var path: String {
+        guard let path = Bundle.main.path(forResource: "postsMock", ofType: "json") else { return "" }
+        return path
+    }
+    
+    var requestType: RequestType {
+        .GET
+    }
+}

@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct PostListView: View {
-    @ObservedObject var viewModel: PostListViewModel
+    @StateObject private var viewModel: PostListViewModel
     @EnvironmentObject var localizationManager: LocalizationManager
+    
+    init(service: ServiceProtocol) {
+        _viewModel = .init(wrappedValue: {PostListViewModel(service: service)}())
+    }
     
     var body: some View {
         List(viewModel.filteredPosts) { post in
-            PostListCell(post: post)
-                .onNavigation {
-                    viewModel.onPostSelection(post)
-                }
+            NavigationLink(value: Page.commentList(post: post)) {
+                PostListCell(post: post)
+            }
         }
         .navigationTitle(localizationManager.postListViewTitle)
         .searchable(text: $viewModel.searchTerms)
@@ -31,7 +34,6 @@ struct PostListView: View {
 
 struct PostListCell: View {
     let post: Post
-    
     var body: some View {
         VStack(alignment: .leading, spacing: 10.0) {
             Text(post.title ?? "")
@@ -44,8 +46,7 @@ struct PostListCell: View {
 
 struct PostListView_Previews: PreviewProvider {
     static var previews: some View {
-        let coordinator = HomeCoordinator(service: NetworkService(requestManager: RequestManager()))
-        PostListView(viewModel: coordinator.postListViewModel)
+        PostListView(service: MockedService())
             .environmentObject(LocalizationManager())
     }
 }
